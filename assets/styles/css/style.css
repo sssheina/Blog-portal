@@ -1078,6 +1078,10 @@ a {
   color: #777777;
 }
 
+.category-title:hover {
+  color: #777777;
+}
+
 .user {
   display: flex;
   flex-direction: row;
@@ -1091,6 +1095,10 @@ a {
   font-weight: 400;
   font-size: 16px;
   color: #000000;
+}
+
+.username:hover {
+  color: #777777;
 }
 
 /*# sourceMappingURL=style.css.map */
