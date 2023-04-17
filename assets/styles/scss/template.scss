@@ -1,0 +1,64 @@
+@import "./globals.scss";
+
+.template {
+    margin-bottom: 84px;
+}
+
+.template__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 391px;
+  background-image: url("../../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.template__text {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  max-width: 716px;
+  color: $color-white;
+  text-align: center;
+}
+
+.template__form {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.template__input-email {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  width: 370px;
+  height: 56px;
+  border-radius: 36px;
+  border: none;
+  text-indent: 32px;
+}
+
+.template__input-email::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-black;
+}
+
+.template__button {
+  width: 210px;
+  height: 60px;
+  background-color: $color-green;
+  border: none;
+}

@@ -1,0 +1,40 @@
+@import './globals.scss';
+
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 42px;
+    max-width: 1200px;
+    margin: 56px auto 45px;
+}
+
+.header__menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    color: $color-blue;
+
+}
+a {
+    text-decoration: none;
+}
+.header__menu-link {
+    color: $color-blue;
+    
+}
+
+.header__menu-button {
+    font-size: 16px;
+    line-height: 28px;
+    width: 128px;
+    height: 40px;
+    background-color: $color-white;
+    border: 2px solid $color-blue;
+}

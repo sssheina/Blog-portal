@@ -1,0 +1,67 @@
+@import './globals.scss';
+
+.cover__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.cover__title_small {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    align-items: center;
+    color: $color-blue;
+    margin-bottom: 12px;
+}
+.cover__title_main {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 84px;
+    color: $color-blue;
+    margin-bottom: 67px;
+}
+
+.cover__block {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between
+}
+
+.cover__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 550px;
+}
+
+.cover__wrapper-pic {
+    width: 550px;
+    height: 386px;
+}
+
+.cover__text {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    color: $color-black;
+}
+
+.cover__line {
+    width: 1200px;
+    height: 1px;
+    color: $color-blue;
+    margin: 72px auto 96px;
+    
+}

@@ -1,0 +1,78 @@
+@import "./globals.scss";
+
+@mixin blog-text {
+  font: {
+    family: "Open Sans";
+    weight: 400;
+    size: 20px;
+  }
+  color: $color-black;
+}
+
+.news {
+  margin: 0 auto;
+}
+
+.news__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 998px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.news__title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  color: $color-black;
+  margin-bottom: 40px;
+}
+
+.news__block {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "user-1 user-2 user-3"
+    "user-4 user-5 user-6";
+  gap: 50px;
+}
+
+.news__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 300px;
+  min-height: 424px;
+  margin-bottom: 30px;
+}
+
+.news__card-text {
+  @include blog-text;
+  line-height: 32px;
+}
+
+.news__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 191px;
+}
+
+.news__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news__button {
+  width: 219px;
+  height: 60px;
+  border-radius: 36px;
+  background-color: $color-white;
+  border: 2px solid $color-blue;
+  align-self: center;
+  margin: 66px auto 124px;
+}
