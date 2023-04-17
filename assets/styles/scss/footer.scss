@@ -1,0 +1,98 @@
+@import "./globals.scss";
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 474px;
+    margin: 0 auto;
+    gap: 100px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 64px;
+}
+
+.footer__logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.footer__text, .footer__rights {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color-gray; 
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 800px;
+    width: 100%;
+    gap: 40px;
+}
+
+.footer__menu-name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.footer__menu-item {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: $color-gray; 
+}
+
+.footer__menu-add {
+    position: absolute;
+    // left: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 28px;
+    width: 72px;
+    height: 30px;
+    background-color: $color-green;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.footer__menu-list  {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 32px; 
+}
+
+.footer__menu-company, .footer__menu-resources, .footer__menu-landings {
+    max-width: 150px;
+}
+
+#careers {
+    padding-right: 20px;
+}
+
+.footer__logo:hover, .footer__menu-item:hover {
+    transform: scale(1.01);
+}
+
+.footer__menu-item:hover {
+    color: $color-green;
+}
