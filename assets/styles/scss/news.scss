@@ -87,3 +87,10 @@
 .news__button:active {
   background-color: $color-lightblue;
 }
+
+.news__card-pic {
+  transition: filter 0.5s ease;
+}
+.news__card-pic:hover {
+  filter: brightness(70%);
+}
