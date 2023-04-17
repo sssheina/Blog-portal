@@ -94,3 +94,10 @@
 .news__card-pic:hover {
   filter: brightness(70%);
 }
+
+.news__userpic {
+  transition: filter 0.5s ease;
+}
+.news__userpic:hover {
+  filter: brightness(70%);
+}
