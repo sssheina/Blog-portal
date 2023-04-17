@@ -61,4 +61,15 @@
   height: 60px;
   background-color: $color-green;
   border: none;
+  font-size: 20px;
+}
+
+.template__button:hover {
+  color: $color-green;
+  background-color: $color-blue;
+  border: 2px solid $color-white;
+}
+
+.template__button:active {
+  background-color: $color-lightblue;
 }
