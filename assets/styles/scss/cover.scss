@@ -59,11 +59,10 @@
 }
 
 .cover__line {
-    width: 1200px;
+    max-width: 1200px;
     height: 1px;
     color: $color-blue;
     margin: 72px auto 96px;
-    
 }
 
 .cover__pic {
