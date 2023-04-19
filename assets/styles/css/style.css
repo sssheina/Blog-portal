@@ -755,7 +755,7 @@ textarea {
 
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .footer__container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     max-width: 580px;
     min-height: 429px;
     gap: 100px;
@@ -1086,8 +1086,15 @@ body._touch .header__menu-link {
 }
 
 .cover__pic:hover,
-.cover__userpic:hover {
+.cover__user-block:hover {
   filter: brightness(70%);
+}
+
+.cover__user-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 @media screen and (min-width: 744px) and (max-width: 1199px) {
@@ -1279,6 +1286,13 @@ body._touch .header__menu-link {
   width: 300px;
   min-height: 209px;
   transition: filter 0.5s ease;
+}
+
+.news__user-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 @media screen and (min-width: 744px) and (max-width: 1199px) {

@@ -138,6 +138,13 @@
   transition: filter 0.5s ease;
 }
 
+.news__user-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .news__container {
     max-width: 592px;

@@ -70,8 +70,15 @@
   transition: filter 0.5s ease;
 }
 .cover__pic:hover,
-.cover__userpic:hover {
+.cover__user-block:hover {
   filter: brightness(70%);
+}
+
+.cover__user-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 
