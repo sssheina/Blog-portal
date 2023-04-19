@@ -22,3 +22,12 @@
 .category-title:hover {
     color: $color-gray;
 }
+
+
+  
+  @media screen and (min-width: 360px) and (max-width: 743px) {
+    .category-title, .category-data {
+        font-size: 14px;
+    }
+  }
+  

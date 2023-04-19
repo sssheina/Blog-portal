@@ -1,62 +1,88 @@
-@import './globals.scss';
-
+@import "./globals.scss";
 
 .header__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 42px;
-    max-width: 1200px;
-    margin: 56px auto 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 42px;
+  max-width: 1200px;
+  margin: 56px auto 45px;
 }
 
 .header__menu-list {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 38px;
-    color: $color-blue;
-
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 38px;
+  color: $color-blue;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .header__menu-link {
-    color: $color-blue;
-    
+  color: $color-blue;
 }
 
 .header__menu-link:hover {
-    border-top: 2px solid $color-blue;
-    border-bottom: 2px solid $color-blue;
-    padding: 7px 0;
+  border-top: 2px solid $color-blue;
+  border-bottom: 2px solid $color-blue;
+  padding: 7px 0;
 }
 
-
+.header__logo-img {
+  background-image: url(/assets/images/logo.svg);
+  background-repeat: no-repeat;
+  width: 156px;
+  height: 41px;
+}
 .header__menu-button {
-    font-size: 16px;
-    line-height: 28px;
-    width: 128px;
-    height: 40px;
-    color: $color-blue;
-    background-color: $color-white;
-    border: 2px solid $color-blue;
+  font-size: 16px;
+  line-height: 28px;
+  width: 128px;
+  height: 40px;
+  color: $color-blue;
+  background-color: $color-white;
+  border: 2px solid $color-blue;
 }
 
 .header__menu-button:hover {
-    color: $color-white;
-    background-color: $color-blue;
-    border: 2px solid $color-white;
+  color: $color-white;
+  background-color: $color-blue;
+  border: 2px solid $color-white;
 }
 
 .header__menu-button:active {
-    background-color: $color-lightblue;
-  }
+  background-color: $color-lightblue;
+}
 
 .header__logo:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 744px) and (max-width: 1199px) {
+  .header__container {
+    max-width: 680px;
+    margin: 56px auto 45px;
+  }
+  .header__logo-img {
+    background-image: url(/assets/images/logo_2.svg);
+    width: 143px;
+    height: 37px;
+  }
+  .header__menu-list {
+    gap: 29px;
+    font-size: 14px;
+  }
+
+  .header__menu-button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 743px) {
+  /* CSS styles for devices with viewport width between 360px and 743px */
 }

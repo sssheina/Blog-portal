@@ -12,7 +12,7 @@
   max-width: 1200px;
   width: 100%;
   min-height: 391px;
-  background-image: url("../../images/background.png");
+  background-image: url(/assets/images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
@@ -72,4 +72,73 @@
 
 .template__button:active {
   background-color: $color-lightblue;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1199px) {
+  .template {
+    margin-bottom: 5px;
+}
+
+.template__container {
+  max-width: 568px;
+  min-height: 563px;
+  background-image: url(/assets/images/background_2.png);
+  }
+
+.template__text {
+  font-size: 40px;
+  max-width: 476px;
+  }
+
+.template__form {
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
+.template__input-email {
+  font-size: 18px;
+  width: 350px;
+  height: 50px;
+  }
+
+.template__input-email::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color-black;
+  }
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 743px) {
+  .template__container {
+    max-width: 300px;
+    min-height: 440px;
+    background-image: url(/assets/images/background_3.png);
+    }
+  
+  .template__text {
+    font-size: 24px;
+    max-width: 254px;
+    line-height: 42px;
+    }
+  
+  .template__form {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .template__input-email {
+    font-size: 14px;
+    width: 195px;
+    height: 30px;
+    }
+  
+  .template__input-email::placeholder {
+    font-size: 14px;
+    }
 }

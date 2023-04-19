@@ -4,10 +4,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
-    min-height: 474px;
-    margin: 0 auto;
+    min-height: 374px;
+    margin: 0px auto;
     gap: 100px;
+    padding-top: 100px;
 }
 
 .footer__content {
@@ -96,3 +98,74 @@
 .footer__menu-item:hover {
     color: $color-green;
 }
+
+.footer__logo-img {
+    background-image: url(/assets/images/logo.svg);
+    background-repeat:no-repeat;
+    width: 156px;
+    height: 41px;
+
+}
+
+@media screen and (min-width: 744px) and (max-width: 1199px) {
+    .footer__container {
+        flex-direction: column;
+        max-width: 580px;
+        min-height: 429px;
+        gap: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .footer__content {
+        max-width: 580px;
+        align-items: center
+    }
+    
+    .footer__logo-text {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        
+    }
+    
+    .footer__text, .footer__rights {
+        font-size: 14px;
+    }
+    
+    .footer__menu {
+        justify-content: space-evenly;
+        max-width: 580px;
+        gap: 70px;
+    }
+    
+    .footer__menu-name {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    
+    .footer__menu-item {
+        font-size: 18px;
+    }
+        
+    .footer__menu-list  {
+        gap: 22px;
+        padding-top: 22px; 
+    }
+    
+    .footer__menu-company, .footer__menu-resources, .footer__menu-landings {
+        max-width: 146px;
+    }
+    
+    #careers {
+        padding-right: 16px;
+    }
+    
+  }
+  
+  @media screen and (min-width: 360px) and (max-width: 743px) {
+    /* CSS styles for devices with viewport width between 360px and 743px */
+  }
+  

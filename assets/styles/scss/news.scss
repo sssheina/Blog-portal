@@ -45,6 +45,7 @@
   flex-direction: column;
   gap: 24px;
   max-width: 300px;
+  width: 100%;
   min-height: 424px;
   margin-bottom: 30px;
 }
@@ -88,16 +89,197 @@
   background-color: $color-lightblue;
 }
 
-.news__card-pic {
-  transition: filter 0.5s ease;
-}
-.news__card-pic:hover {
+.news__worker-pic:hover,
+.news__girl-pic:hover,
+.news__employee-pic:hover,
+.news__businessman-pic:hover,
+.news__workplace-pic:hover,
+.news__collaboration-pic:hover {
   filter: brightness(70%);
 }
 
-.news__userpic {
-  transition: filter 0.5s ease;
-}
 .news__userpic:hover {
   filter: brightness(70%);
+}
+
+.news__worker-pic {
+  background-image: url(/assets/images/worker.png);
+}
+
+.news__girl-pic {
+  background-image: url(/assets/images/employee_girl.png);
+}
+
+.news__employee-pic {
+  background-image: url(/assets/images/employee_trash.png);
+}
+
+.news__businessman-pic {
+  background-image: url(/assets/images/businessman.png);
+}
+
+.news__workplace-pic {
+  background-image: url(/assets/images/workplace.png);
+}
+
+.news__collaboration-pic {
+  background-image: url(/assets/images/collaboration.png);
+}
+
+.news__worker-pic,
+.news__girl-pic,
+.news__employee-pic,
+.news__businessman-pic,
+.news__workplace-pic,
+.news__collaboration-pic {
+  background-repeat: no-repeat;
+  width: 300px;
+  min-height: 209px;
+  transition: filter 0.5s ease;
+}
+
+@media screen and (min-width: 744px) and (max-width: 1199px) {
+  .news__container {
+    max-width: 592px;
+  }
+  .news__title {
+    font-size: 40px;
+  }
+  .news__card {
+    gap: 24px;
+    max-width: 260px;
+    min-height: 430px;
+    align-items: center;
+  }
+  .news__card-text {
+    font-size: 18px;
+  }
+  .news__block {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "user-1 user-2"
+      "user-3 user-4"
+      "user-5 user-6";
+    gap: 40px;
+    justify-items: end;
+    width: 600px;
+  }
+
+  .news__worker-pic {
+    background-image: url(/assets/images/worker_2.png);
+    }
+
+  .news__girl-pic {
+    background-image: url(/assets/images/employee_girl_2.png);
+  }
+
+  .news__employee-pic {
+    background-image: url(/assets/images/employee_trash_2.png);
+  }
+
+  .news__businessman-pic {
+    background-image: url(/assets/images/businessman_2.png);
+  }
+
+  .news__workplace-pic {
+    background-image: url(/assets/images/workplace_2.png);
+  }
+
+  .news__collaboration-pic {
+    background-image: url(/assets/images/collaboration_2.png);
+  }
+  .news__worker-pic,
+  .news__girl-pic,
+  .news__employee-pic,
+  .news__businessman-pic,
+  .news__workplace-pic,
+  .news__collaboration-pic {
+    width: 260px;
+    min-height: 185px;
+  }
+  
+  .news__card-wrapper {
+    min-height: 208px;
+  }
+
+  .news__button {
+    font-size: 18px;
+    margin: 60px auto 110px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 743px) {
+  .news__container {
+    max-width: 260px;
+  }
+  .news__title {
+    font-size: 26px;
+  }
+  .news__card {
+    gap: 24px;
+    max-width: 260px;
+    height: 370px;
+    margin-bottom: 1px;
+  }
+
+  .news__card-text {
+    font-size: 16px;
+  }
+  .news__block {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "user-1"
+      "user-2"
+      "user-3"
+      "user-4"
+      "user-5"
+      "user-6";
+    gap: 6px;
+    max-width: 260px;
+    width: 100%;
+    min-height: 2700px;
+  }
+  .news__worker-pic {
+    background-image: url(/assets/images/worker_2.png);
+    }
+
+  .news__girl-pic {
+    background-image: url(/assets/images/employee_girl_2.png);
+  }
+
+  .news__employee-pic {
+    background-image: url(/assets/images/employee_trash_2.png);
+  }
+
+  .news__businessman-pic {
+    background-image: url(/assets/images/businessman_2.png);
+  }
+
+  .news__workplace-pic {
+    background-image: url(/assets/images/workplace_2.png);
+  }
+
+  .news__collaboration-pic {
+    background-image: url(/assets/images/collaboration_2.png);
+  }
+  .news__worker-pic,
+  .news__girl-pic,
+  .news__employee-pic,
+  .news__businessman-pic,
+  .news__workplace-pic,
+  .news__collaboration-pic {
+    width: 260px;
+    min-height: 185px;
+  }
+
+  .news__card-wrapper {
+    justify-content: space-around
+  }
+
+  .news__button {
+    font-size: 18px;
+    margin: 50px auto 100px;
+  }
 }
