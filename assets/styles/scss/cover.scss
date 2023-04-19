@@ -1,5 +1,8 @@
 @import "./globals.scss";
 
+.cover {
+  margin-top: 150px;
+}
 .cover__container {
   display: flex;
   flex-direction: column;
@@ -70,6 +73,7 @@
 .cover__userpic:hover {
   filter: brightness(70%);
 }
+
 
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .cover__container {

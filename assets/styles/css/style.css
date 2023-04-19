@@ -739,10 +739,6 @@ textarea {
   padding-right: 20px;
 }
 
-.footer__logo:hover, .footer__menu-item:hover {
-  transform: scale(1.01);
-}
-
 .footer__menu-item:hover {
   color: #65E4A3;
 }
@@ -803,13 +799,30 @@ textarea {
 @media screen and (min-width: 360px) and (max-width: 743px) {
   /* CSS styles for devices with viewport width between 360px and 743px */
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.95;
+}
+
 .header__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 42px;
   max-width: 1200px;
-  margin: 56px auto 45px;
+  width: 100%;
+  background-color: #ffffff;
+  background: cover;
+  margin: 56px auto 25px;
 }
 
 .header__menu-list {
@@ -865,10 +878,18 @@ a {
   background-color: #1C3D5B;
 }
 
-.header__logo:hover {
-  transform: scale(1.1);
+/* ----------------------- */
+body._touch .header__menu-list > li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
+body._touch .header__menu-link {
+  flex: 1 1 auto;
+}
+
+/* ----------------------- */
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .header__container {
     max-width: 680px;
@@ -888,8 +909,102 @@ a {
   }
 }
 @media screen and (min-width: 360px) and (max-width: 743px) {
-  /* CSS styles for devices with viewport width between 360px and 743px */
+  .header__container {
+    max-width: 260px;
+    width: 100%;
+  }
+  .header__menu-list {
+    flex-direction: column;
+  }
+  .header__logo-img {
+    background-image: url(/assets/images/logo_mobile.svg);
+    width: 143px;
+    height: 37px;
+  }
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #0A2640;
+  }
+  .menu__icon::before,
+  .menu__icon::after {
+    content: "";
+  }
+  .menu__icon::before {
+    top: 0;
+  }
+  .menu__icon::after {
+    bottom: 0;
+  }
+  .menu__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    width: 90%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+  .menu__body._active {
+    left: 0;
+  }
+  .menu__list > li {
+    flex-wrap: wrap;
+    margin: 0px 0px 30px 0px;
+  }
+  .menu__list > li:last-child {
+    margin-bottom: 0;
+  }
+  .menu__list > li._active .menu__sub-list {
+    display: block;
+  }
+  .menu__link {
+    font-size: 20px;
+  }
+  .menu__sub-list {
+    position: relative;
+    margin: -5px 0px 0px 0px;
+    display: none;
+  }
+  .menu__sub-link {
+    font-size: 22px;
+    color: white;
+  }
 }
+.cover {
+  margin-top: 150px;
+}
+
 .cover__container {
   display: flex;
   flex-direction: column;
@@ -1410,6 +1525,42 @@ a {
   font-style: normal;
   font-weight: 700;
   border-radius: 30px;
+}
+
+.btn-up {
+  font-family: "Open Sans";
+  position: fixed;
+  background: #65E4A3;
+  right: 1em;
+  bottom: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.btn-up:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.btn-up::before {
+  content: url("/assets/images/arrow-up.svg");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+.btn-up_hiding {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .category {

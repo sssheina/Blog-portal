@@ -1,0 +1,135 @@
+// -------------- КНОПКА ВВЕРХ ------------------
+
+const btnUp = {
+    el: document.querySelector(".btn-up"),
+    scrolling: false,
+    show() {
+      if (
+        this.el.classList.contains("btn-up_hide") &&
+        !this.el.classList.contains("btn-up_hiding")
+      ) {
+        this.el.classList.remove("btn-up_hide");
+        this.el.classList.add("btn-up_hiding");
+        window.setTimeout(() => {
+          this.el.classList.remove("btn-up_hiding");
+        }, 300);
+      }
+    },
+    hide() {
+      if (
+        !this.el.classList.contains("btn-up_hide") &&
+        !this.el.classList.contains("btn-up_hiding")
+      ) {
+        this.el.classList.add("btn-up_hiding");
+        window.setTimeout(() => {
+          this.el.classList.add("btn-up_hide");
+          this.el.classList.remove("btn-up_hiding");
+        }, 300);
+      }
+    },
+    addEventListener() {
+     
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        if (this.scrolling && scrollY > 0) {
+          return;
+        }
+        this.scrolling = false;
+        
+        if (scrollY > 400) {
+          this.show(); 
+        } else {
+          this.hide(); 
+        }
+      });
+    
+      document.querySelector(".btn-up").onclick = () => {
+        this.scrolling = true;
+        this.hide();
+       
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
+    },
+  };
+  
+  btnUp.addEventListener();
+  
+  // ("use strict");
+  
+  const isMobile = {
+    Android: function () {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+      return (
+        isMobile.Android() ||
+        isMobile.BlackBerry() ||
+        isMobile.iOS() ||
+        isMobile.Opera() ||
+        isMobile.Windows()
+      );
+    },
+  };
+  
+  if (isMobile.any()) {
+    document.body.classList.add("_touch");
+  
+    let menuArrows = document.querySelectorAll(".menu__arrow");
+    if (menuArrows.length > 0) {
+      for (let index = 0; index < menuArrows.length; index++) {
+        const menuArrow = menuArrows[index];
+        menuArrow.addEventListener("click", function (e) {
+          menuArrow.parentElement.classList.toggle("_active");
+        });
+      }
+    }
+  } else {
+    document.body.classList.add("_pc");
+  }
+  
+  // Меню бургер
+  const iconMenu = document.querySelector(".menu__icon");
+  const menuBody = document.querySelector(".menu__body");
+  if (iconMenu) {
+    iconMenu.addEventListener("click", function (e) {
+      document.body.classList.toggle("_lock");
+      iconMenu.classList.toggle("_active");
+      menuBody.classList.toggle("_active");
+    });
+  }
+  
+
+  // --------------- МОДАЛЬНОЕ ОКНО -------------
+  
+  if (window.screen.availWidth < window.screen.availHeight) {
+    document.querySelector(".popup__img").src =
+      "./assets/images/modal-window_mobile-01.png";
+  }
+  
+  let modalWindow = document.getElementById("overlay");
+  let btnClosePopup = document.getElementById("close");
+  let delay_popup = 5000;
+  
+  setTimeout(() => {
+    modalWindow.style.display = "block";
+  }, delay_popup);
+  
+  btnClosePopup.onclick = () => {
+    modalWindow.style.display = "none";
+  };

@@ -1,6 +1,42 @@
+@import "./globals.scss";
+
 .btn {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     border-radius: 30px;
 }
+
+.btn-up {
+    font-family: "Open Sans";
+    position: fixed;
+    background: $color-green;
+    right: 1em;
+    bottom: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .btn-up:hover {
+    background-color: $color-white;
+    transform: scale(1.1);
+  }
+  
+  .btn-up::before {
+    content: url("/assets/images/arrow-up.svg");
+  }
+  
+  .btn-up_hide {
+    display: none;
+  }
+  .btn-up_hiding {
+    opacity: 0;
+    transform: translateY(100px);
+  }
