@@ -806,8 +806,8 @@ textarea {
   .footer__container {
     flex-direction: column-reverse;
     width: 100%;
-    min-height: 429px;
-    gap: 50px;
+    min-height: 260px;
+    gap: 40px;
     padding-top: 5px;
   }
   .footer__text {
@@ -826,6 +826,8 @@ textarea {
     align-self: center;
     align-items: center;
     padding-top: 1px;
+    gap: 12px;
+    height: 80px;
   }
   .footer__logo-text {
     align-items: center;
