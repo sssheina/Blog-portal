@@ -33,7 +33,11 @@ Task: I need to develop webpage for three screens (desktop, tablet and mobile). 
 <br>
 <br>
 
-
+<div align="center"><br>
+<a href="https://github.com/sssheina/Blog-portal">
+    <img src="https://komarev.com/ghpvc/?username=sssheina" alt="page views" />
+  </a>
+</div>
 
 ## Contacts
 
