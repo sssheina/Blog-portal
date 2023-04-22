@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="shortcut icon"
       href="./assets/images/logo_shape.svg"
-      type="image/svg"
-    >
-    <link rel="stylesheet" href="./assets/styles/css/style.css" >
+      type="image/svg">
+    <link rel="stylesheet" href="./assets/styles/css/style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
     <title>BOLDO</title>
   </head>
   <body>
@@ -42,7 +44,11 @@
                 <a href="#" class="header__menu-link menu__link">About</a>
               </li>
               <li>
-                <button type="submit" class="header__menu-button btn _modal-open" data-modal-open="modal-1">
+                <button
+                  type="submit"
+                  class="header__menu-button btn _modal-open"
+                  data-modal-open="modal-1"
+                >
                   Log In
                 </button>
               </li>
@@ -77,79 +83,97 @@
             <div class="cover__user user">
               <a href="#">
                 <div class="cover__user-block">
-                <div class="cover__userpic">
-                  <img
-                    class="cover__userpic-pic"
-                    src="./assets/images/user_1.png"
-                    alt="userpic"
-                  >
+                  <div class="cover__userpic">
+                    <img
+                      class="cover__userpic-pic"
+                      src="./assets/images/user_1.png"
+                      alt="userpic"
+                    >
+                  </div>
+                  <span class="cover__username username">Chandler Bing</span>
                 </div>
-                <span class="cover__username username">Chandler Bing</span>
-              </div>
               </a>
             </div>
           </div>
         </div>
       </div>
-    
 
-    <!-- login modal window -->
+      <!-- login modal window -->
 
+      <div class="form-modallog _modal" data-modal="modal-1">
+        <div class="modal-bg">
+          <div class="form-modal modal-body">
+            <div class="modal-close">
+              <svg
+                class="modal-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+                />
+              </svg>
+            </div>
+            <div class="form-toggle">
+              <button id="login-toggle" onclick="toggleLogin()">log in</button>
+              <button id="signup-toggle" onclick="toggleSignup()">
+                sign up
+              </button>
+            </div>
 
-    
-    <div class="form-modallog _modal" data-modal="modal-1">
-      <div class="modal-bg">
-        <div class="form-modal modal-body">
-        <div class="modal-close"><img src="img/close.svg" alt=""></div>
-      <div class="form-toggle">
-          <button id="login-toggle" onclick="toggleLogin()">log in</button>
-          <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
-      </div>
-  
-      <div id="login-form">
-          <form>
-              <input type="text" placeholder="Enter email or username"/>
-              <input type="password" placeholder="Enter password"/>
-              <button type="button" class="btn login">login</button>
-              <p><a href="javascript:void(0)">Forgotten account</a></p>
-              <hr/>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
-          </form>
-      </div>
-  
-      <div id="signup-form">
-          <form>
-              <input type="email" placeholder="Enter your email"/>
-              <input type="text" placeholder="Choose username"/>
-              <input type="password" placeholder="Create password"/>
-              <button type="button" class="btn signup">create account</button>
-              <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
-              <hr/>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
-              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
-          </form>
+            <div id="login-form">
+              <form>
+                <input type="text" placeholder="Enter email or username" >
+                <input type="password" placeholder="Enter password" >
+                <button type="button" class="btn login">login</button>
+                <p><a href="javascript:void(0)">Forgotten account</a></p>
+                <hr>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in
+                  with google
+                </button>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign
+                  in with linkedin
+                </button>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in
+                  with microsoft
+                </button>
+              </form>
+            </div>
+
+            <div id="signup-form">
+              <form>
+                <input type="email" placeholder="Enter your email">
+                <input type="text" placeholder="Choose username">
+                <input type="password" placeholder="Create password">
+                <button type="button" class="btn signup">create account</button>
+                <p>
+                  Clicking <strong>create account</strong> means that you are
+                  agree to our
+                  <a href="javascript:void(0)">terms of services</a>.
+                </p>
+                <hr>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up
+                  with google
+                </button>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign
+                  up with linkedin
+                </button>
+                <button type="button" class="btn -box-sd-effect">
+                  <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up
+                  with microsoft
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-     
-    
-    
-    <!-- <div id="login-modal">
-      <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br><br>
-        <button type="submit">Log In</button>
-      </form>
-    </div> -->
-    
-  </div>
-  <hr class="cover__line" >
+    <hr class="cover__line">
 
     <!-- news -->
 
@@ -176,19 +200,17 @@
               </div>
 
               <div class="news__user user">
-                
-                
-                  <a href="#">
+                <a href="#">
                   <div class="news__user-block">
                     <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_1.png"
-                      alt="userpic"
-                    >
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_1.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Chandler Bing</span>
                   </div>
-                  <span class="news__username username">Chandler Bing</span>
-                </div>
                 </a>
               </div>
             </div>
@@ -219,15 +241,15 @@
               <div class="news__user user">
                 <a href="#">
                   <div class="news__user-block">
-                  <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_2.png"
-                      alt="userpic"
-                    >
+                    <div class="news__userpic">
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_2.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Rachel Green</span>
                   </div>
-                  <span class="news__username username">Rachel Green</span>
-                </div>
                 </a>
               </div>
             </div>
@@ -256,16 +278,16 @@
               <div class="news__user user">
                 <a href="#">
                   <div class="news__user-block">
-                  <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_3.png"
-                      alt="userpic"
-                    >
+                    <div class="news__userpic">
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_3.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Monica Geller</span>
                   </div>
-                  <span class="news__username username">Monica Geller</span>
-                </div>
-                  </a>
+                </a>
               </div>
             </div>
           </div>
@@ -293,16 +315,16 @@
               <div class="news__user user">
                 <a href="#">
                   <div class="news__user-block">
-                  <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_1.png"
-                      alt="userpic"
-                    >
+                    <div class="news__userpic">
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_1.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Chandler Bing</span>
                   </div>
-                  <span class="news__username username">Chandler Bing</span>
-                </div>
-                  </a>
+                </a>
               </div>
             </div>
           </div>
@@ -333,15 +355,15 @@
               <div class="news__user user">
                 <a href="#">
                   <div class="news__user-block">
-                  <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_2.png"
-                      alt="userpic"
-                    >
+                    <div class="news__userpic">
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_2.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Rachel Green</span>
                   </div>
-                  <span class="news__username username">Rachel Green</span>
-                </div>
                 </a>
               </div>
             </div>
@@ -373,15 +395,15 @@
               <div class="news__user user">
                 <a href="#">
                   <div class="news__user-block">
-                  <div class="news__userpic">
-                    <img
-                      class="news__pic"
-                      src="./assets/images/user_3.png"
-                      alt="userpic"
-                    >
+                    <div class="news__userpic">
+                      <img
+                        class="news__pic"
+                        src="./assets/images/user_3.png"
+                        alt="userpic"
+                      >
+                    </div>
+                    <span class="news__username username">Monica Geller</span>
                   </div>
-                  <span class="news__username username">Monica Geller</span>
-                </div>
                 </a>
               </div>
             </div>
@@ -405,9 +427,32 @@
             size="30"
             required
           >
-          <button class="template__button btn">Start now</button>
+          <button class="template__button btn js-open-modal" data-modal="1">
+            Start now
+          </button>
         </div>
       </div>
+
+      <!-- modal window 2 -->
+      <div class="modal" data-modal="1">
+        <!--   Svg иконка для закрытия окна  -->
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+        <div class="modal__content">
+          <h2 class="modal__title">Thank you!</h2>
+          <p class="modal__text">
+            We will get back to you as soon as possible!
+          </p>
+        </div>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
     </div>
 
     <!-- footer -->
