@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BOLDO</title>
   </head>
   <body>
@@ -41,7 +42,7 @@
                 <a href="#" class="header__menu-link menu__link">About</a>
               </li>
               <li>
-                <button type="submit" class="header__menu-button btn">
+                <button type="submit" class="header__menu-button btn _modal-open" data-modal-open="modal-1">
                   Log In
                 </button>
               </li>
@@ -90,8 +91,65 @@
           </div>
         </div>
       </div>
+    
+
+    <!-- login modal window -->
+
+
+    
+    <div class="form-modallog _modal" data-modal="modal-1">
+      <div class="modal-bg">
+        <div class="form-modal modal-body">
+        <div class="modal-close"><img src="img/close.svg" alt=""></div>
+      <div class="form-toggle">
+          <button id="login-toggle" onclick="toggleLogin()">log in</button>
+          <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+      </div>
+  
+      <div id="login-form">
+          <form>
+              <input type="text" placeholder="Enter email or username"/>
+              <input type="password" placeholder="Enter password"/>
+              <button type="button" class="btn login">login</button>
+              <p><a href="javascript:void(0)">Forgotten account</a></p>
+              <hr/>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
+          </form>
+      </div>
+  
+      <div id="signup-form">
+          <form>
+              <input type="email" placeholder="Enter your email"/>
+              <input type="text" placeholder="Choose username"/>
+              <input type="password" placeholder="Create password"/>
+              <button type="button" class="btn signup">create account</button>
+              <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+              <hr/>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
+              <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
+          </form>
+      </div>
     </div>
-    <hr class="cover__line" >
+  </div>
+  </div>
+     
+    
+    
+    <!-- <div id="login-modal">
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Log In</button>
+      </form>
+    </div> -->
+    
+  </div>
+  <hr class="cover__line" >
 
     <!-- news -->
 
