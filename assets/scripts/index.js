@@ -119,21 +119,21 @@ const btnUp = {
 
 
 function toggleSignup(){
-  document.getElementById("login-toggle").style.backgroundColor="#fff";
-   document.getElementById("login-toggle").style.color="#222";
-   document.getElementById("signup-toggle").style.backgroundColor="#65E4A3";
-   document.getElementById("signup-toggle").style.color="#fff";
-   document.getElementById("login-form").style.display="none";
-   document.getElementById("signup-form").style.display="block";
+  document.getElementById("form__login-toggle").style.backgroundColor="#fff";
+   document.getElementById("form__login-toggle").style.color="#222";
+   document.getElementById("form__signup-toggle").style.backgroundColor="#65E4A3";
+   document.getElementById("form__signup-toggle").style.color="#fff";
+   document.getElementById("form__login-form").style.display="none";
+   document.getElementById("form__signup-form").style.display="block";
 }
 
 function toggleLogin(){
-   document.getElementById("login-toggle").style.backgroundColor="#65E4A3";
-   document.getElementById("login-toggle").style.color="#fff";
-   document.getElementById("signup-toggle").style.backgroundColor="#fff";
-   document.getElementById("signup-toggle").style.color="#222";
-   document.getElementById("signup-form").style.display="none";
-   document.getElementById("login-form").style.display="block";
+   document.getElementById("form__login-toggle").style.backgroundColor="#65E4A3";
+   document.getElementById("form__login-toggle").style.color="#fff";
+   document.getElementById("form__signup-toggle").style.backgroundColor="#fff";
+   document.getElementById("form__signup-toggle").style.color="#222";
+   document.getElementById("form__signup-form").style.display="none";
+   document.getElementById("form__login-form").style.display="block";
 }
 
 const modalBtns = document.querySelectorAll('._modal-open');
@@ -147,7 +147,7 @@ function openModal(elem) {
 }
 
 function closeModal(e) {
-	if (e.target.classList.contains('modal-close') || e.target.closest('.modal-close') || e.target.classList.contains('modal-bg')) {
+	if (e.target.classList.contains('form__modal-close') || e.target.closest('.form__modal-close') || e.target.classList.contains('form__modal-bg')) {
 		e.target.closest('._modal').classList.remove('_active');
 		body.classList.remove('_locked')
 	}

@@ -1750,7 +1750,7 @@ body._locked {
   pointer-events: all;
 }
 
-.modal-close {
+.form__modal-close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -1759,14 +1759,14 @@ body._locked {
   height: 16px;
 }
 
-.modal-bg {
+.form__modal-bg {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
 }
 
-.form-modal {
+.form__form-modal {
   font-family: "Open Sans", sans-serif;
   position: relative;
   width: 450px;
@@ -1779,7 +1779,7 @@ body._locked {
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.form-modal button {
+.form__form-modal button {
   cursor: pointer;
   position: relative;
   text-transform: capitalize;
@@ -1790,12 +1790,12 @@ body._locked {
   transition: 0.2s;
 }
 
-.form-modal button:hover {
+.form__form-modal button:hover {
   background-color: #777777;
   color: #FEFEFE;
 }
 
-.form-modal .btn {
+.form__form-modal .form__btn {
   border-radius: 36px;
   border: none;
   font-weight: bold;
@@ -1808,24 +1808,24 @@ body._locked {
   color: #777777;
 }
 
-.form-modal .login, .form-modal .signup {
+.form__form-modal .login, .form__form-modal .signup {
   background: #0A2640;
   color: #FEFEFE;
 }
 
-.form-modal .login:hover, .form-modal .signup:hover {
+.form__form-modal .login:hover, .form__form-modal .signup:hover {
   color: #0A2640;
   background-color: #FEFEFE;
   border: 2px solid #0A2640;
 }
 
-.form-toggle {
+.form__form-toggle {
   position: relative;
   width: 100%;
   height: auto;
 }
 
-.form-toggle button {
+.form__form-toggle button {
   width: 50%;
   float: left;
   padding: 1.5em;
@@ -1838,20 +1838,20 @@ body._locked {
   border-top-left-radius: 20px;
 }
 
-.form-toggle button:nth-child(1) {
+.form__form-toggle button:nth-child(1) {
   border-bottom-right-radius: 20px;
 }
 
-.form-toggle button:nth-child(2) {
+.form__form-toggle button:nth-child(2) {
   border-bottom-left-radius: 20px;
 }
 
-#login-toggle {
+#form__login-toggle {
   background: #65E4A3;
   color: white;
 }
 
-.form-modal form {
+.form__form-modal form {
   position: relative;
   width: 90%;
   height: auto;
@@ -1859,24 +1859,24 @@ body._locked {
   transform: translateX(-50%);
 }
 
-#login-form, #signup-form {
+#form__login-form, #signup-form {
   position: relative;
   width: 100%;
   height: auto;
   padding-bottom: 1em;
 }
 
-#signup-form {
+#form__signup-form {
   display: none;
 }
 
-#login-form button, #signup-form button {
+#form__login-form button, #form__signup-form button {
   width: 100%;
   margin-top: 0.5em;
   padding: 0.6em;
 }
 
-.form-modal input {
+.form__form-modal input {
   position: relative;
   width: 85%;
   font-size: 1em;
@@ -1891,33 +1891,33 @@ body._locked {
   transition: 0.4s;
 }
 
-.form-modal input:focus, .form-modal input:active {
+.form__form-modal input:focus, .form__form-modal input:active {
   transform: scaleX(1.02);
 }
 
-.form-modal input::-webkit-input-placeholder {
+.form__form-modal input::-webkit-input-placeholder {
   color: #0A2640;
   font-weight: 400;
 }
 
-.form-modal p {
+.form__form-modal p {
   font-size: 15px;
   line-height: 29px;
   font-weight: 700;
   text-align: center;
 }
 
-.form-modal p a {
+.form__form-modal p a {
   color: #65E4A3;
   text-decoration: none;
   transition: 0.2s;
 }
 
-.form-modal p a:hover {
+.form__form-modal p a:hover {
   color: #222;
 }
 
-.form-modal i {
+.form__form-modal i {
   position: absolute;
   left: 10%;
   top: 50%;
@@ -1941,7 +1941,7 @@ body._locked {
 }
 
 @media only screen and (max-width: 500px) {
-  .form-modal {
+  .form__form-modal {
     width: 100%;
   }
 }
